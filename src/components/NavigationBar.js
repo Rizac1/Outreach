@@ -1,9 +1,9 @@
 import React from 'react';
-import { Nav, Navbar, Form, FormControl, Button } from 'react-bootstrap';
-import mag from '../assets/mag.png';
+import { Nav, Navbar, Form, FormControl, button } from 'react-bootstrap';
+import mag from '../assets/mag.webp';
 import styled from 'styled-components';
 
-const Styles = styled.div `
+const Styles = styled.div`
 .navbar {
     background-color: black;
 }
@@ -16,8 +16,15 @@ const Styles = styled.div `
         }
     }
 
-button {
-    border-color: black;
+    button {
+        background: none;
+        border: 0;
+    }
+
+img {
+    height: 35px;
+    margin-right: 0;
+    transform: scaleX(-1);
 }
 `;
 
@@ -34,11 +41,11 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/Login">Login</Nav.Link></Nav.Item>
                 </Nav>
                 <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-success">
-                <img src={mag} alt="Javascript is needed"></img>
-      </Button>
-    </Form>
+                    <FormControl type="text" placeholder="Search" />
+                    <button type="button" class="btn btn-defaulft">
+                        <img src={mag} alt="Javascript is needed" />
+                    </button>
+                </Form>
             </Navbar.Collapse>
         </Navbar>
     </Styles>
