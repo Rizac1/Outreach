@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { NFP } from "./pages/NFP";
-import { User } from "./pages/User";
+import { NFPUser } from "./pages/NFPUser";
 import { Login } from "./pages/Login"
 import { NoPage } from "./pages/NoPage";
 import { Layout } from "./components/Layout";
@@ -17,7 +17,7 @@ class App extends Component {
           <Router>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/User" component={User} />
+              <Route path="/NFPUser" component={NFPUser} />
               <Route path="/NFP" component={NFP} />
               <Route path="/Login" component={Login} />
               <Route component={NoPage} />
