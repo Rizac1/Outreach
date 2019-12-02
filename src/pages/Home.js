@@ -32,7 +32,7 @@ const Styles = styled.div`
 export const Home = () => (
   <Styles>
     <div>
-      <h1>Outreached</h1>
+      <h1>Outreachd</h1>
       <article>
         <h4>Our Mission</h4>
         <p>
