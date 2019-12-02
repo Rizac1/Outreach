@@ -18,6 +18,10 @@ const Styles = styled.div`
     background-color: #f1f1f1;
   }
 
+  p {
+    text-align: center;
+  }
+
   h4 {
     text-align: center;
   }
@@ -53,31 +57,30 @@ const Styles = styled.div`
 `;
 
 
-  
+
 
 
 export const Home = () => (
   <Styles>
-      <Jumbo fluid className="jumbo">
-              <h1>Welcome</h1>
-      </Jumbo>
-  
+    <Jumbo fluid className="jumbo">
+      <h1>Welcome</h1>
+    </Jumbo>
+
     <div>
       <h1>Outreachd</h1>
       <article>
         <h4>Our Mission</h4>
         <p>
-          Our mission is to start a website that will allow Non-Profit
-          Organizations match with companies that might be able to lend support.
+          Our mission is to provide a platform to allow NFP to bring awareness to specifically needed skills that are critical to their success and which they lack, 
+          and allow business to quickly engrave to provide volunteer resources to match the highlighted needs.
         </p>
         <p>
-          We hope to be able to get this website to help the people of the
-          communities to benefit in some way
+          Check out our full list of Not-For-Profits: <a href="/NFPlist">NFP List</a>
         </p>
       </article>
       <article className="Non-Profits">
-        <h4>List of some of our Non-Profit Members</h4>
-        {/* <ul className="container">
+        <h4>List of some of our Not-For-Profits</h4>
+        <ul className="container">
           <li>
             <a href="#">Link 1</a>
           </li>
@@ -93,7 +96,10 @@ export const Home = () => (
           <li>
             <a href="#">Link 5</a>
           </li>
-        </ul> */}
+          <li>
+            <a href="#">Link 6</a>
+          </li>
+        </ul>
       </article>
     </div>
   </Styles>
