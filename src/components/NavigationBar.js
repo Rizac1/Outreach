@@ -36,12 +36,12 @@ export const NavigationBar = () => (
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/NFP">Non-Profit List</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/NFPlist">Non-Profit List</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/NFPUser">Profile</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/Login">Login</Nav.Link></Nav.Item>
                 </Nav>
                 <Form inline>
-                    <FormControl type="text" placeholder="Search" />
+                    <FormControl type="text" placeholder="Search NFP Names" />
                     <button type="button" class="btn btn-defaulft">
                         <img src={mag} alt="Javascript is needed" />
                     </button>
