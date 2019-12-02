@@ -1,4 +1,6 @@
 import React from "react";
+import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
+import group from '../assets/group.jpg';
 import styled from "styled-components";
 
 const Styles = styled.div`
@@ -26,11 +28,40 @@ const Styles = styled.div`
 
   ul {
     width: 20%;
-}
+  }
+
+  .jumbotron {
+    background: url(${group}) no-repeat fixed bottom;
+    background-size: cover;
+    color: #efefef;
+    height: 200px;
+    margin-left: -405px;
+    margin-right: -405px;
+    position: relative;
+    z-index: -2;
+  }
+  
+.overlay {
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
 `;
+
+
+  
+
 
 export const Home = () => (
   <Styles>
+      <Jumbo fluid className="jumbo">
+              <h1>Welcome</h1>
+      </Jumbo>
+  
     <div>
       <h1>Outreachd</h1>
       <article>
@@ -67,3 +98,5 @@ export const Home = () => (
     </div>
   </Styles>
 );
+
+
