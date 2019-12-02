@@ -21,7 +21,7 @@ export const NoPage = () => (
       <ul>
           <li>If you typed the page address in the Address bar, make sure that it<br></br> is spelled correctly.</li>
           <li>Open the home page, and then look for links <br></br> to the information you want.</li>
-          <li>Click the <a href="javascript:history.back()">Back</a> button to try another link.</li>
+          <li>Click the <a href="/">Home</a> button to try another link.</li>
       </ul>
       <p>HTTP 404 - File not found</p>
       <p>Internet Information Services</p>

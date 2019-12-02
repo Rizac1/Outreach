@@ -1,5 +1,6 @@
 import React from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, Form, FormControl, Button } from 'react-bootstrap';
+import mag from '../assets/mag.png';
 import styled from 'styled-components';
 
 const Styles = styled.div `
@@ -14,6 +15,10 @@ const Styles = styled.div `
             color: white;
         }
     }
+
+button {
+    border-color: black;
+}
 `;
 
 export const NavigationBar = () => (
@@ -28,6 +33,12 @@ export const NavigationBar = () => (
                     <Nav.Item><Nav.Link href="/User">Profile</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/Login">Login</Nav.Link></Nav.Item>
                 </Nav>
+                <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-success">
+                <img src={mag} alt="Javascript is needed"></img>
+      </Button>
+    </Form>
             </Navbar.Collapse>
         </Navbar>
     </Styles>

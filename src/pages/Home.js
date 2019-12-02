@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
+import { Jumbotron as Jumbo } from 'react-bootstrap';
 import group from '../assets/group.jpg';
 import styled from "styled-components";
 
@@ -77,7 +77,7 @@ export const Home = () => (
       </article>
       <article className="Non-Profits">
         <h4>List of some of our Non-Profit Members</h4>
-        <ul className="container">
+        {/* <ul className="container">
           <li>
             <a href="#">Link 1</a>
           </li>
@@ -93,7 +93,7 @@ export const Home = () => (
           <li>
             <a href="#">Link 5</a>
           </li>
-        </ul>
+        </ul> */}
       </article>
     </div>
   </Styles>
