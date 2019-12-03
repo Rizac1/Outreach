@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import {Router, Route} from 'react-router';
+import {Router, Route} from 'react-router';
 import './index.css';
 import App from './App';
 import * as firebase from 'firebase';

@@ -7,6 +7,7 @@ import { Login } from "./pages/Login"
 import { NoPage } from "./pages/NoPage";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
+import { Login2 } from "../src/login2/login2"
 
 class App extends Component {
   render() {
@@ -16,10 +17,14 @@ class App extends Component {
         <Layout>
           <Router>
             <Switch>
-              <Route exact path="/" component={Home} />
+
               <Route path="/NFPUser" component={NFPUser} />
               <Route path="/NFPlist" component={NFPlist} />
               <Route path="/Login" component={Login} />
+              <Route exact path="/" component={Login2} />
+              <Route path="/Home" component={Home}/>
+          
+    
               <Route component={NoPage} />
             </Switch>
           </Router>
