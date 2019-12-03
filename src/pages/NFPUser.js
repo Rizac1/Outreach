@@ -73,7 +73,7 @@ const Styles = styled.div`
   }
 `;
 
-export class Database extends React.Component{
+export class NFPUser extends React.Component{
 
   constructor() {
     super();
@@ -88,15 +88,11 @@ export class Database extends React.Component{
   updateInput = e => {
     this.setState({
       [e.target.name]: e.target.value
-    });
+    })
+    console.log(this.state.Email);
   }  
   render(){
-    return(<NFPUser />);
- }
-}
-
-export const NFPUser = () => (
-    <Styles>
+    return(<Styles>
       <Jumbo fluid className="jumbo">
               <h1>Profile Page</h1>
       </Jumbo>
@@ -110,19 +106,18 @@ export const NFPUser = () => (
               <Card.Title>Contact Information:</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Email:</Card.Subtitle>
               <Card.Text>
+                {this.state.Email}
+                </Card.Text>
                 <form>
                   <input type="text"
-                  name="email"
+                  name="Email"
                   placeholder="Email Address"
-                  onChange={() => e => {
-                    this.setState({
-                      [e.target.name]: e.target.value
-                    });
-                  }  }
+                  value={this.state.Email}
+                  onChange={this.updateInput}
                   />
                   <button type="submit">Submit</button>
                 </form>
-              </Card.Text>
+              
               <Card.Subtitle className="mb-2 text-muted">Website:</Card.Subtitle>
               <Card.Text>
               <ul id="website"></ul>
@@ -158,5 +153,8 @@ export const NFPUser = () => (
             </Card.Body>
           </Card>
         </div>
-    </Styles>
-)
+    </Styles>);
+ }
+}
+
+export default NFPUser;
