@@ -2,6 +2,10 @@ import React from 'react';
 import { Card, Image, Jumbotron as Jumbo } from 'react-bootstrap';
 import group from '../assets/group.jpg';
 import styled from "styled-components";
+import 'firebase/database';
+import firestore from "../firebase"
+import Firebase from "firebase"
+import firebase from "../firebase"
 
 const Styles = styled.div`
 
@@ -69,7 +73,26 @@ const Styles = styled.div`
   }
 `;
 
-  
+export class Database extends React.Component{
+  render(){
+    return(<NFPUser />);
+ }
+  constructor() {
+    super();
+    this.state = {
+     Email: "",
+     ProfileName: "",
+     Skills: "",
+     Website: ""
+    };
+  }
+
+  updateInput = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+}
 
 export const NFPUser = () => (
     <Styles>
@@ -86,18 +109,25 @@ export const NFPUser = () => (
               <Card.Title>Contact Information:</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">Email:</Card.Subtitle>
               <Card.Text>
-                emailAddress@email.com
+                <form>
+                  <input type="text"
+                  name="email"
+                  placeholder="Email Address"
+                  onChange={() => this.updateInput}
+                  />
+                  <button type="submit">Submit</button>
+                </form>
               </Card.Text>
               <Card.Subtitle className="mb-2 text-muted">Website:</Card.Subtitle>
               <Card.Text>
-                www.thisIsAWebsiteForTheNFP.com
+              <ul id="website"></ul>
               </Card.Text>
             </Card.Body>
           </Card>
           <Card>
             <Card.Body>
               <Card.Title>General Information:</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">Skills Needed:</Card.Subtitle>
+              <Card.Subtitle className="mb-2 text-muted"><ul id="sklills"></ul></Card.Subtitle>
               <Card.Text>
                 Legal Advice 
                 <br/>
@@ -125,4 +155,3 @@ export const NFPUser = () => (
         </div>
     </Styles>
 )
-
