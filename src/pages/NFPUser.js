@@ -74,9 +74,7 @@ const Styles = styled.div`
 `;
 
 export class Database extends React.Component{
-  render(){
-    return(<NFPUser />);
- }
+
   constructor() {
     super();
     this.state = {
@@ -91,7 +89,10 @@ export class Database extends React.Component{
     this.setState({
       [e.target.name]: e.target.value
     });
-  }
+  }  
+  render(){
+    return(<NFPUser />);
+ }
 }
 
 export const NFPUser = () => (
@@ -113,7 +114,11 @@ export const NFPUser = () => (
                   <input type="text"
                   name="email"
                   placeholder="Email Address"
-                  onChange={() => this.updateInput}
+                  onChange={() => e => {
+                    this.setState({
+                      [e.target.name]: e.target.value
+                    });
+                  }  }
                   />
                   <button type="submit">Submit</button>
                 </form>
