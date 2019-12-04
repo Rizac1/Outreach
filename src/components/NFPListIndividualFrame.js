@@ -11,7 +11,7 @@ export const NFPListIndividualFrame = ({nfplist}) => (
       </Card.Text>
       <Card.Subtitle className="mb-2 text-muted">Skills Needed:</Card.Subtitle>
       <Card.Text>
-        {nfplist.skillslist}
+        {nfplist.skills}
       </Card.Text>
     </Card.Body>
   </Card>
