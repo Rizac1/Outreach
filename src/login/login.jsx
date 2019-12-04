@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 
 import "./login-2.css";
 
-export class Login2 extends React.Component {
+export class Login extends React.Component {
 
   constructor(props) {
       super(props);
@@ -80,15 +80,15 @@ export class Login2 extends React.Component {
   }
 }
 
-Login2.propTypes = {
+Login.propTypes = {
 
 }
 
-Login2.defaultProps = {
+Login.defaultProps = {
 
 }
 
 
 // module.exports = Login2;
-export default Login2;
+export default Login;
           
