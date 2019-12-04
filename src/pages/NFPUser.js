@@ -79,10 +79,10 @@ export class NFPUser extends React.Component {
     super();
     this.state = {
       allData: [''],
-      Email: "",
-      ProfileName: "",
-      Skills: "",
-      Website: "",
+      Email: "emailaddress@email.com",
+      ProfileName: "Name",
+      Skills: "Cooking",
+      Website: "A website",
       isEditable: false,
       databaseLinked: false
     };
@@ -107,12 +107,12 @@ export class NFPUser extends React.Component {
       Skills: this.state.Skills,
       Website: this.state.Website
     });
-    // this.setState({
-    //   Email: "",
-    //   ProfileName: "",
-    //   Skills: "",
-    //   Website: ""
-    // });
+    this.setState({
+      Email: "",
+      ProfileName: "",
+      Skills: "",
+      Website: ""
+    });
   };
   // databaseinfo = () => {
   //     const db = firebase.firestore();
