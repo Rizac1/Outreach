@@ -99,7 +99,7 @@ export class NFPUser extends React.Component{
     db.settings({
       timestampsInSnapshots: true
     });
-    const userRef = db.collection("NFP").add({
+    const userRef = db.collection("NFP").doc("hNijh7UtEaWx9p7SvQo1").set({
       Email: this.state.Email,
      ProfileName: this.state.ProfileName,
      Skills: this.state.Skills,
@@ -175,10 +175,7 @@ export class NFPUser extends React.Component{
                     onChange={this.updateInput}
                     value={this.state.Skills}
                     />
-                    <button type="submit" onClick={() => {
-                this.setState({
-                  isEditable: !this.state.isEditable
-                });}}>Submit</button>
+                    <button type="submit">Submit</button>
                   </form> 
                 <Card.Text>
                   Other Junk
