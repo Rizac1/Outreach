@@ -42,7 +42,7 @@ export const NavigationBar = () => (
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search NFP Names" />
-                    <button type="button" class="btn btn-defaulft">
+                    <button type="button" className="btn btn-defaulft">
                         <img src={mag} alt="Javascript is needed" />
                     </button>
                 </Form>
