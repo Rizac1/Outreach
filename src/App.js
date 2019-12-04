@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { NFPlist } from "./pages/NFPlist";
+import NFPList from "./pages/NFPlist";
 import { NFPUser } from "./pages/NFPUser";
-import { Login } from "./pages/Login"
 import { NoPage } from "./pages/NoPage";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
+import { Login } from "../src/login/login"
 
 class App extends Component {
   render() {
@@ -16,10 +16,13 @@ class App extends Component {
         <Layout>
           <Router>
             <Switch>
-              <Route exact path="/" component={Home} />
+
               <Route path="/NFPUser" component={NFPUser} />
-              <Route path="/NFPlist" component={NFPlist} />
+              <Route path="/NFPlist" component={NFPList} />
               <Route path="/Login" component={Login} />
+              <Route path="/" component={Home}/>
+          
+    
               <Route component={NoPage} />
             </Switch>
           </Router>
