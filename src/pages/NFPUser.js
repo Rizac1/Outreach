@@ -151,7 +151,7 @@ export class NFPUser extends React.Component {
   onclickfunction = () => {
     this.addNfpUser();
     this.editing();
-    setTimeout(function(){ window.location.reload(); }, 500);
+    setTimeout(function(){ window.location.reload(); }, 250);
 
   }
 
@@ -277,7 +277,7 @@ export class NFPUser extends React.Component {
                 </Card.Text>
                 <Card.Subtitle className="mb-2 text-muted">Goals Reached:</Card.Subtitle>
                 <Card.Text>
-                  we have successfully helped feed over 1 million people in the US!
+                  we have successfully helped provide baskets to over 1 million people in the US!
                 </Card.Text>
               </Card.Body>
             </Card>
