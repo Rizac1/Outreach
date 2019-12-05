@@ -1,10 +1,10 @@
 import React from 'react'
-import NFPListIndividualFrame from './NFPListIndividualFrame'
+import { NFPListIndividualFrame } from './NFPListIndividualFrame'
 
-let NFPListMapping = (props) => {
+export const NFPListMapping = (props) => {
     return props.nfplist.map((nfplist) => (
-        <NFPListIndividualFrame key={nfplist.email} nfplist={nfplist}/>
+        <NFPListIndividualFrame key={nfplist.Email} nfplist={nfplist}/>
     ))
 }
 
-export default NFPListMapping
+//export default NFPListMapping;

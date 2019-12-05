@@ -1,19 +1,45 @@
 import React from 'react'
-//import NFPListMapping from '../components/NFPListMapping'
+import { NFPListMapping } from '../components/NFPListMapping'
+import 'firebase/database';
+import firestore from "../firebase"
+import Firebase from "firebase"
+import firebase from "../firebase"
 
 class NFPList extends React.Component {
-  // constructor(){
-  //   this.state = {
-  //     nfplist: []
-  //   }
-  // }
-//fetch(whatever database location)
-//  .then(response => response.json())
-//  .then(result => this.setState({ nfplist: result})))
 
+constructor(){
+  super();
+  this.state = {
+    nfplist:[],
+    databaseLinked: false
+  }
+}
+
+
+  componentDidMount() {
+    const db = firebase.firestore();
+    var mydata = [];
+
+    db.collection("Projects").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        mydata.push(doc.data())
+
+      });
+
+      this.setState({
+        nfplist: mydata,
+        databaseLinked: true
+      })
+    });
+  }
 render() {
-    return <h1>Hello, This page will display a list of all the NFP Projects</h1>;
-    {/* <NFPListMapping nfplist={this.state.nfplist}  /> */}
+  let page;
+  if (this.state.databaseLinked){
+    page = <div> <NFPListMapping nfplist={this.state.nfplist} /> </div>
+  }else{
+    page = <div><p>Loading...</p></div>
+  }
+    return page;
   }
 }
 

@@ -101,7 +101,7 @@ export class NFPUser extends React.Component {
     db.settings({
       timestampsInSnapshots: true
     });
-    db.collection("NFP").doc("hNijh7UtEaWx9p7SvQo1").update({
+    db.collection("NFP").doc("NFPex1").update({
       Email: this.state.Email,
       ProfileName: this.state.ProfileName,
       Skills: this.state.Skills,
@@ -271,7 +271,7 @@ export class NFPUser extends React.Component {
             <Card>
               <Card.Body>
                 <Card.Title>General Information:</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted"><ul id="sklills"></ul></Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted">Skills:<ul id="sklills"></ul></Card.Subtitle>
                 <Card.Text>
                   {this.state.allData[0].Skills}
                 </Card.Text>
