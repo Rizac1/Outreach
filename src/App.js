@@ -6,7 +6,7 @@ import { NFPUser } from "./pages/NFPUser";
 import { NoPage } from "./pages/NoPage";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
-import { Login } from "../src/login/login"
+import { Login } from "../src/login-copy/login"
 
 class App extends Component {
   render() {
