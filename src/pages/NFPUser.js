@@ -79,10 +79,10 @@ export class NFPUser extends React.Component {
     super();
     this.state = {
       allData: [''],
-      Email: "emailaddress@email.com",
-      ProfileName: "Name",
-      Skills: "Cooking",
-      Website: "A website",
+      Email: "",
+      ProfileName: "",
+      Skills: "",
+      Website: "",
       isEditable: false,
       databaseLinked: false
     };
@@ -96,7 +96,7 @@ export class NFPUser extends React.Component {
   }
 
   addNfpUser = e => {
-    e.preventDefault();
+   // e.preventDefault();
     const db = firebase.firestore();
     db.settings({
       timestampsInSnapshots: true
@@ -107,12 +107,7 @@ export class NFPUser extends React.Component {
       Skills: this.state.Skills,
       Website: this.state.Website
     });
-    this.setState({
-      Email: "",
-      ProfileName: "",
-      Skills: "",
-      Website: ""
-    });
+    //window.location.reload()
   };
   // databaseinfo = () => {
   //     const db = firebase.firestore();
@@ -137,10 +132,28 @@ export class NFPUser extends React.Component {
         allData: mydata,
         databaseLinked: true
       })
-      console.log(this.state.allData[0]);
+      this.setState({
+        Email: this.state.allData[0].Email,
+        ProfileName: this.state.allData[0].ProfileName,
+        Skills: this.state.allData[0].Skills,
+        Website: this.state.allData[0].Website,
+      })
+      console.log(this.state.allData[0])
     });
   }
+  editing = () => {
+    this.setState({
+      isEditable: !this.state.isEditable
+    });
+   //window.location.reload()
+    console.log(this.state.isEditable)
+  }
+  onclickfunction = () => {
+    this.addNfpUser();
+    this.editing();
+    setTimeout(function(){ window.location.reload(); }, 500);
 
+  }
 
   render() {
     let page;
@@ -226,13 +239,8 @@ export class NFPUser extends React.Component {
               </Card.Body>
             </Card>
           </div>
-          <button onClick={() => {
-            this.setState({
-              isEditable: !this.state.isEditable
-            });
-            console.log(this.state.isEditable)
-          }}>
-            Cancel
+          <button  onClick={this.onclickfunction}>
+            Done
               </button>
         </Styles>
     } else {
