@@ -84,7 +84,7 @@ export class Login extends React.Component {
     const sidebarCollasped = windowWidth < 1100;
 
     return (
-      <div class='jumboton'>
+     
         <div className="login">      {/*Background image.  UI looks better without*/} {/* <div data-layer="1b95d00d-ebc6-44ef-a711-96b9158f9cef" className="image-1"></div>
         */}
         <div class="row">
@@ -105,12 +105,12 @@ export class Login extends React.Component {
 
             </svg>
             <div className="your-privacy-is-important-to-us-well-never-share-your-information"> Your privacy is important to us, we'll never share<br /> your information.</div>
-            
+
             <Link to={"./noPage"}>
               <div className="fogot">Forgot?</div></Link>
           </div>
         </div>
-      </div>
+      
 
     );
   }
