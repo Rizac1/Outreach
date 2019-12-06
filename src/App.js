@@ -8,7 +8,8 @@ import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
 import { Login, AuthProvider } from "../src/login copy/login"
 import { Land } from "../src/land/land";
-import { Authentication } from "../src/login"
+import { Authentication } from "../src/login copy/login"
+import SignUp from "../src/login copy/signup"
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
                 <Route exact={true} path="/NFPlist" component={NFPList} />
                 <Route exact={true} path="/Login" component={Login} />
                 <Route exact={true} path="/" component={Home} />
+                <Route exact={true} path="/signup" component={SignUp}/>
 
 
                 <Route component={NoPage} />

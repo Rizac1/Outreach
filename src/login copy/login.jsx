@@ -1,10 +1,11 @@
 // const React = require("react");
 // const style = require("./login.css");
-import React, { useEffects, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-//import {BrowserRouter as Router, Switch, Route, Link, useRouteMatch} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, useRouteMatch} from "react-router-dom";
 import PropTypes from "prop-types";
 import firebase from "../firebase"
+import { SignUp } from "./signup"
 
 import "./login.css";
 
@@ -14,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    app.auth().onAuthStateChanged(setCurrentUser);
+    firebase.auth().onAuthStateChanged(setCurrentUser);
   }, []);
 
   return (
@@ -85,7 +86,7 @@ export class Login extends React.Component {
             <button className="rectangle-3">Log in </button></Link>
           <input type="checkbox" className="rectangle-4" />
           <div className="remember-me">Remember Me? </div>
-          <Link to={"./NFPList"}>
+          <Link to={"./signup"}>
             <div className="new-to-outreachd-sign-up-now">New to OutReachD?  Sign up now</div>
           </Link>
           <svg preserveAspectRatio="none" viewBox="-0.75 -0.75 292.5 456.5" className="path-1">
@@ -102,7 +103,3 @@ export class Login extends React.Component {
     );
   }
 }
-
-
-
-export default Login;

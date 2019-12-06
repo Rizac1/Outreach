@@ -8,7 +8,7 @@ import { Home } from "./pages/Home";
 import NFPList from "./pages/NFPlist";
 import { NFPUser } from "./pages/NFPUser";
 import { NoPage } from "./pages/NoPage";
-
+import SignUp from "../src/login copy/signup"
 
 
 
