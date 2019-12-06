@@ -10,17 +10,7 @@ const Styles = styled.div`
 .nfpsearchbar{
   width: 20rem;
 }
-
-button {
-        background: none;
-        border: 0;
-    }
-
-.img {
-    height: 35px;
-    margin-right: 0;
-    transform: scaleX(-1);
-}
+// background:blue
 `;
 
 

@@ -5,20 +5,23 @@ export const NFPListIndividualFrame = ({nfplist}) => (
   <Card>
     <Card.Body>
       <Card.Title>{nfplist.ProfileName}</Card.Title>
-      <Card.Subtitle className="mb-2 text-muted">{nfplist.ProjectName}</Card.Subtitle>
+      <Card.Subtitle>{nfplist.ProjectName}</Card.Subtitle>
       <Card.Text>
         {nfplist.About}
       </Card.Text>
-      <Card.Text>
-        {nfplist.Time}
-        <br></br>
-        {nfplist.Location}
-      </Card.Text>
+
       <Card.Subtitle className="mb-2 text-muted">Skills Needed:</Card.Subtitle>
       <Card.Text>
-        {nfplist.Skills}
+        <b>{nfplist.Skills}</b>
       </Card.Text>
-      <a href="/NFPUser">Learn More</a>
+      <Card.Text>
+      <div className="d-flex justify-content-between">
+        <p>Time Expected To Complete: <b>{nfplist.Time}</b></p>
+        <p>Location: <b>{nfplist.Location}</b></p>
+        <a href="/NFPUser">Learn More</a>
+      </div>
+      </Card.Text>
+      
     </Card.Body>
   </Card>
 )
