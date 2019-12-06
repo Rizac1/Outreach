@@ -9,6 +9,9 @@ import mag from '../assets/mag.webp';
 import styled from 'styled-components';
 
 const Styles = styled.div`
+.nfpsearchbar{
+  width: 20rem;
+}
 
 button {
         background: none;
@@ -108,10 +111,10 @@ render() {
     <Styles>
       <div>
         <Form inline>
-        <FormControl type="text" placeholder="Search NFP Projects" onChange={this.handleChange}/>
-        <button type="button" className="btn btn-defaulft" >
+        <FormControl className='nfpsearchbar' type="text" placeholder="Search NFP Projects by Skills Needed" onChange={this.handleChange}/>
+        {/* <button type="button" className="btn btn-defaulft" >
             <img className='img' src={mag} alt="Javascript is needed" />
-        </button>
+        </button> */}
         </Form>
         {page}
       </div>
