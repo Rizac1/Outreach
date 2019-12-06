@@ -6,7 +6,8 @@ import { NFPUser } from "./pages/NFPUser";
 import { NoPage } from "./pages/NoPage";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
-import { Login } from "../src/login-copy/login"
+import { Login } from "../src/login copy/login"
+import {Land} from "../src/land/land";
 
 class App extends Component {
   render() {
@@ -16,7 +17,7 @@ class App extends Component {
         <Layout>
           <Router>
             <Switch>
-
+              <Route path="/Land" component={Land}/>
               <Route path="/NFPUser" component={NFPUser} />
               <Route path="/NFPlist" component={NFPList} />
               <Route path="/Login" component={Login} />
