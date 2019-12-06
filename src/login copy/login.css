@@ -3,6 +3,13 @@
   min-height: 100%;
 }
 
+.password-icon {
+  position: absolute;
+  top: 322px;
+  right: 840px;
+  cursor: pointer;
+}
+
 input{
   font-size: 25px;
   font-weight: lighter;

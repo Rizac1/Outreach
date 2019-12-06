@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Switch, Route, useRouteMatch} from "react-route
 import PropTypes from "prop-types";
 import firebase from "../firebase"
 import { SignUp } from "./signup"
+import PasswordMask from "react-password-mask"
 
 import "./login.css";
 
@@ -69,8 +70,17 @@ export class Login extends React.Component {
     this.setState({ windowWidth, windowHeight });
   }
 
-  render() {
+  state = {
+    isPasswordShown: false
+  };
 
+  togglePasswordVisiblity = () => {
+    const { isPasswordShown } = this.state;
+    this.setState({ isPasswordShown: !isPasswordShown });
+  };
+
+  render() {
+    const { isPasswordShown } = this.state;
     const { windowWidth } = this.state;
     const sidebarCollasped = windowWidth < 1100;
 
@@ -80,7 +90,8 @@ export class Login extends React.Component {
           <div className="log-in-to-outreachd">Log in to OutReachD<br /><br /></div>
           <form onSubmit={this.handleSubmit}>
             <input type="text" placeholder="email" value={this.state.name} onChange={this.handleChange} className="rectangle-1" />
-            <input type="text" placeholder="password" value={this.state.name} className="rectangle-2" />
+            <input type={isPasswordShown ? "text" : "password"} placeholder="password" value={this.state.name} className="rectangle-2" />
+            <i className={`fa ${isPasswordShown ? "fa-eye" : "fa-eye-slash"} password-icon`} onClick={this.togglePasswordVisiblity} />
           </form>
           <Link to={"./NFPList"}>
             <button className="rectangle-3">Log in </button></Link>
