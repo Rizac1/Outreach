@@ -1,11 +1,9 @@
 import React from 'react'
 import { NFPListMapping } from '../components/NFPListMapping'
 import 'firebase/database';
-import firestore from "../firebase"
-import Firebase from "firebase"
 import firebase from "../firebase"
-import { Form, FormControl, button } from 'react-bootstrap';
-import mag from '../assets/mag.webp';
+import { Form, FormControl } from 'react-bootstrap';
+//import mag from '../assets/mag.webp';
 import styled from 'styled-components';
 
 const Styles = styled.div`
@@ -25,7 +23,7 @@ button {
 }
 `;
 
-var mydata  =[]
+
 class NFPList extends React.Component {
 
 constructor(){
