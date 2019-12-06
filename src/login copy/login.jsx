@@ -1,8 +1,7 @@
-// const React = require("react");
-// const style = require("./login.css");
+import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {BrowserRouter as Router, Switch, Route, useRouteMatch} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
 import PropTypes from "prop-types";
 import firebase from "../firebase"
 import { SignUp } from "./signup"
@@ -85,32 +84,34 @@ export class Login extends React.Component {
     const sidebarCollasped = windowWidth < 1100;
 
     return (
-      <div id="wrapper">
-        <div className="login">        <div data-layer="1b95d00d-ebc6-44ef-a711-96b9158f9cef" className="image-1"></div>
-          <div className="log-in-to-outreachd">Log in to OutReachD<br /><br /></div>
-          <form onSubmit={this.handleSubmit}>
-            <input type="text" placeholder="email" value={this.state.name} onChange={this.handleChange} className="rectangle-1" />
-            <input type={isPasswordShown ? "text" : "password"} placeholder="password" value={this.state.name} className="rectangle-2" />
-            <i className={`fa ${isPasswordShown ? "fa-eye" : "fa-eye-slash"} password-icon`} onClick={this.togglePasswordVisiblity} />
-          </form>
-          <Link to={"./NFPList"}>
-            <button className="rectangle-3">Log in </button></Link>
-          <input type="checkbox" className="rectangle-4" />
-          <div className="remember-me">Remember Me? </div>
-          <Link to={"./signup"}>
-            <div className="new-to-outreachd-sign-up-now">New to OutReachD?  Sign up now</div>
-          </Link>
-          <svg preserveAspectRatio="none" viewBox="-0.75 -0.75 292.5 456.5" className="path-1">
+      <div class='jumboton'>
+        <div className="login">      {/*Background image.  UI looks better without*/} {/* <div data-layer="1b95d00d-ebc6-44ef-a711-96b9158f9cef" className="image-1"></div>
+        */}
+        <div class="row">
+            <div className="log-in-to-outreachd">Log in to OutReachD<br /><br /></div>
+            <form onSubmit={this.handleSubmit}>
+              <input type="text" placeholder="email" value={this.state.name} onChange={this.handleChange} className="rectangle-1" />
+              <input type={isPasswordShown ? "text" : "password"} placeholder="password" value={this.state.name} className="rectangle-2" />
+              <i className={`fa ${isPasswordShown ? "fa-eye" : "fa-eye-slash"} password-icon`} onClick={this.togglePasswordVisiblity} />
+            </form>
+            <Link to={"./NFPList"}>
+              <button className="rectangle-3">Log in </button></Link>
+            <input type="checkbox" className="rectangle-4" />
+            <div className="remember-me">Remember Me? </div>
+            <Link to={"./signup"}>
+              <div className="new-to-outreachd-sign-up-now">New to OutReachD?  Sign up now</div>
+            </Link>
+            <svg preserveAspectRatio="none" viewBox="-0.75 -0.75 292.5 456.5" className="path-1">
 
-          </svg>
-          <div className="your-privacy-is-important-to-us-well-never-share-your-information"> Your privacy is important to us, we'll never share<br /> your information.</div>
-
-          <div className="rectangle-5"></div>
-          <div className="rectangle-8"></div>
-          <Link to={"./noPage"}>
-            <div className="fogot">Forgot?</div></Link>
+            </svg>
+            <div className="your-privacy-is-important-to-us-well-never-share-your-information"> Your privacy is important to us, we'll never share<br /> your information.</div>
+            
+            <Link to={"./noPage"}>
+              <div className="fogot">Forgot?</div></Link>
+          </div>
         </div>
       </div>
+
     );
   }
 }
