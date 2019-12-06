@@ -1,10 +1,32 @@
 // const React = require("react");
 // const style = require("./login.css");
-import React from "react";
+import React, { useEffects, useState } from "react";
 import { Link } from "react-router-dom";
+//import {BrowserRouter as Router, Switch, Route, Link, useRouteMatch} from "react-router-dom";
 import PropTypes from "prop-types";
+import firebase from "../firebase"
 
 import "./login.css";
+
+export const AuthContext = React.createContext();
+
+export const AuthProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    app.auth().onAuthStateChanged(setCurrentUser);
+  }, []);
+
+  return (
+    <AuthContext.Provider
+      value={{
+        currentUser
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
 export class Login extends React.Component {
 
