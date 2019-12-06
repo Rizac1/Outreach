@@ -100,9 +100,6 @@ render() {
       <div>
         <Form inline>
         <FormControl className='nfpsearchbar' type="text" placeholder="Search NFP Projects by Skills Needed" onChange={this.handleChange}/>
-        {/* <button type="button" className="btn btn-defaulft" >
-            <img className='img' src={mag} alt="Javascript is needed" />
-        </button> */}
         </Form>
         {page}
       </div>

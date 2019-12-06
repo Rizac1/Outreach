@@ -4,8 +4,9 @@ import { Card } from 'react-bootstrap';
 export const NFPListIndividualFrame = ({nfplist}) => (
   <Card>
     <Card.Body>
-      <Card.Title>{nfplist.ProfileName}</Card.Title>
-      <Card.Subtitle>{nfplist.ProjectName}</Card.Subtitle>
+      <Card.Title><b>{nfplist.ProfileName}</b></Card.Title>
+      <Card.Subtitle><b><i>{nfplist.ProjectName}</i></b></Card.Subtitle>
+      <br></br>
       <Card.Text>
         {nfplist.About}
       </Card.Text>
