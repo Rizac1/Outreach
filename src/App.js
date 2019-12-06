@@ -7,26 +7,29 @@ import { NoPage } from "./pages/NoPage";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavigationBar";
 import { Login } from "../src/login/login"
+import { Authentication } from "../src/login"
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <NavigationBar />
+        <AuthProvider>
         <Layout>
           <Router>
             <Switch>
 
-              <Route path="/NFPUser" component={NFPUser} />
-              <Route path="/NFPlist" component={NFPList} />
-              <Route path="/Login" component={Login} />
-              <Route path="/" component={Home}/>
-          
-    
+              <Route exact={true} path="/NFPUser" component={NFPUser} />
+              <Route exact={true} path="/NFPlist" component={NFPList} />
+              <Route exact={true} path="/Login" component={Login} />
+              <Route exact={true} path="/" component={Home} />
+
+
               <Route component={NoPage} />
             </Switch>
           </Router>
         </Layout>
+        </AuthProvider>
       </React.Fragment>
     );
   }
