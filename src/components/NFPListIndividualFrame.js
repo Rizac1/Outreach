@@ -18,6 +18,7 @@ export const NFPListIndividualFrame = ({nfplist}) => (
       <Card.Text>
         {nfplist.Skills}
       </Card.Text>
+      <a href="/NFPUser">Learn More</a>
     </Card.Body>
   </Card>
 )
