@@ -17,6 +17,7 @@ button {
         padding: 0;
         height: 100%;
         width: 100%;
+        position: relative;
         -webkit-font-smoothing: antialiased;
         overflow: -moz-scrollbars-none;
         -ms-overflow-style: none;
@@ -37,14 +38,7 @@ button {
     transform-origin: center;
       opacity: 1;
       cursor: default;
-      margin-top: 0.00px;
-      margin-right: 0.00px;
-      margin-bottom: 0.00px;
-      margin-left: 0.00px;
-      padding-top: 0.00px;
-      padding-right: 0.00px;
-      padding-bottom: 0.00px;
-      padding-left: 0.00px;
+
       overflow-x: auto;
       overflow-y: auto;
       background-color: rgba(255, 255, 255, 1);
