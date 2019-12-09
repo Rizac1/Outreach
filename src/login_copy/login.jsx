@@ -139,43 +139,43 @@ export class Login extends React.Component {
       </div>
                 
          </div></div> </div> */}
-                    <div class="p-2"></div>
-                  </div>
-                  
+          <div class="p-2"></div>
+        </div>
 
 
-                  <form> {/* Email and Password */}
-                    <div class="form-group">
-                      <h2 class="above">Log in to OutReachD</h2>
-                      <input type="email" class="form-control shadow p-3 mb-5 bg-light rounded rectangle-1" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                      <input type={isPasswordShown ? "text" : "password"} class="form-control shadow p-3 mb-5 bg-light rounded rectangle-2" id="exampleInputPassword1" placeholder="Password" />
-                      <i className={`fa ${isPasswordShown ? "fa-eye" : "fa-eye-slash"} password-icon`} onClick={this.togglePasswordVisiblity} />
-                    </div>
 
-                    <div class="form-check mb-2 mr-sm-2">
-                      <input class="form-check-input" type="checkbox" id="inlineFormCheck" />
-                      <label class="form-check-label remember" for="inlineFormCheck">
-                        Remember me?
+        <form> {/* Email and Password */}
+          <div class="form-group">
+            <h2 class="above">Log in to OutReachD</h2>
+            <input type="email" class="form-control shadow p-3 mb-5 bg-light rounded rectangle-1" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input type={isPasswordShown ? "text" : "password"} class="form-control shadow p-3 mb-5 bg-light rounded rectangle-2" id="exampleInputPassword1" placeholder="Password" />
+            <i className={`fa ${isPasswordShown ? "fa-eye" : "fa-eye-slash"} password-icon`} onClick={this.togglePasswordVisiblity} />
+          </div>
+
+          <div class="form-check mb-2 mr-sm-2">
+            <input class="form-check-input" type="checkbox" id="inlineFormCheck" />
+            <label class="form-check-label remember" for="inlineFormCheck">
+              Remember me?
     </label>
-                    </div>
-                    <Link to={"./"}>
-                      <button type="button" class="btn btn-primary rectangle-3">Log In</button></Link>
-                  </form>
+          </div>
+          <Link to={"./"}>
+            <button type="button" class="btn btn-primary rectangle-3">Log In</button></Link>
+        </form>
 
-                  <Link to={"./signup"}>
-                    <div className="new-to-outreachd-sign-up-now">New to OutReachD?  Sign up now</div>
-                  </Link>
-
-
-
-
-                  {/* Background image.   Broken. */}
+        <Link to={"./signup"}>
+          <div className="new-to-outreachd-sign-up-now">New to OutReachD?  Sign up now</div>
+        </Link>
 
 
 
 
-                </div>
-                )
-              }
-            }
+        {/* Background image.   Broken. */}
+
+
+
+
+      </div>
+    )
+  }
+}
