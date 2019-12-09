@@ -110,7 +110,7 @@ export class Login extends React.Component {
               <div className="fogot">Forgot?</div></Link>
           </div>
         </div>
-      {/* This is a test*/}
+      {/* This is a test  */}
 
     );
   }
