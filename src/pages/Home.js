@@ -1,6 +1,6 @@
 import React from "react";
 import { Jumbotron as Jumbo } from 'react-bootstrap';
-import group from '../assets/group.jpg';
+import gears from '../assets/gears.jpg';
 import styled from "styled-components";
 
 const Styles = styled.div`
@@ -35,13 +35,12 @@ const Styles = styled.div`
   }
 
   .jumbotron {
-    background: url(${group}) no-repeat fixed bottom;
-    background-size: cover;
+    background: url(${gears}) no-repeat fixed;
+    background-size: contain;
     color: #efefef;
     height: 200px;
     margin-left: -405px;
     margin-right: -405px;
-    position: relative;
     z-index: -2;
   }
   
