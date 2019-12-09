@@ -160,7 +160,7 @@ export class Login extends React.Component {
                         Remember me?
     </label>
                     </div>
-                    <Link to={"./NFPList"}>
+                    <Link to={"./"}>
                       <button type="button" class="btn btn-primary rectangle-3">Log In</button></Link>
                   </form>
 
