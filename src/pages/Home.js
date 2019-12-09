@@ -2,6 +2,7 @@ import React from "react";
 import { Jumbotron as Jumbo } from 'react-bootstrap';
 import gears from '../assets/gears.jpg';
 import styled from "styled-components";
+import "../pages/Home.css";
 
 const Styles = styled.div`
    article {
@@ -59,10 +60,6 @@ const Styles = styled.div`
     z-index: -1;
   }
 `;
-
-
-
-
 
 export const Home = () => (
   <Styles>

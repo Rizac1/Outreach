@@ -1,13 +1,12 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
 import PropTypes from "prop-types";
-import firebase from "../firebase"
-import { SignUp } from "./signup"
-import PasswordMask from "react-password-mask"
-
-import "./login.css";
+import firebase from "../firebase";
+import { SignUp } from "./signup";
+import PasswordMask from "react-password-mask";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../login_copy/login.css";
 
 export const AuthContext = React.createContext();
 
@@ -84,7 +83,7 @@ export class Login extends React.Component {
     const sidebarCollasped = windowWidth < 1100;
 
     return (
-
+      <div class="body">
       <div class="container">
         {/*Nav */} {/*
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -175,6 +174,7 @@ export class Login extends React.Component {
 
 
 
+      </div>
       </div>
     )
   }

@@ -4,12 +4,12 @@ import { Home } from "./pages/Home";
 import NFPList from "./pages/NFPlist";
 import { NFPUser } from "./pages/NFPUser";
 import { NoPage } from "./pages/NoPage";
-import { Layout } from "./components/Layout";
-import { NavigationBar } from "./components/NavigationBar";
-import { Login, AuthProvider } from "../src/login copy/login"
+import { Layout } from "./components/Layout"; 
+import { Login, AuthProvider } from "../src/login_copy/login"
 import { Land } from "../src/land/land";
-import { Authentication } from "../src/login copy/login"
-import SignUp from "../src/login copy/signup"
+import { Authentication } from "../src/login_copy/login"
+import SignUp from "../src/login_copy/signup"
+import { NavigationBar } from "./components/NavigationBar";
 
 class App extends Component {
   render() {

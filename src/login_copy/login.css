@@ -72,6 +72,10 @@
 
 */
 
+.body {
+  background-color: white;
+}
+
 .colors{
   font-family: Tahoma, Arial;
   color:  rgba(19, 41, 61, 1);
@@ -191,7 +195,7 @@ top: 298.00px;
 .password-icon {
   position: absolute;
   top: 318px;
-  right: 900px;
+  left: 720px;
   cursor: pointer;
  
 }
