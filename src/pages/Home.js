@@ -35,13 +35,12 @@ const Styles = styled.div`
   }
 
   .jumbotron {
-    background: url(${gears}) no-repeat fixed bottom;
-    background-size: cover;
+    background: url(${gears}) no-repeat fixed;
+    background-size: contain;
     color: #efefef;
     height: 200px;
     margin-left: -405px;
     margin-right: -405px;
-    position: relative;
     z-index: -2;
   }
   
