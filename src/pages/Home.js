@@ -103,6 +103,9 @@ export const Home = () => (
           <li>
             <a href="#">Link 6</a>
           </li>
+           <li>
+            <a href="#">Link 7</a>
+          </li>
         </ul>
       </article>
     </div>
