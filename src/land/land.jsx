@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import mag from "../assets/mag.webp"
 
 import "./land.css";
 
@@ -23,7 +24,7 @@ export class Land extends React.Component {
 
     return (
       <div class="container">
-      <div class="land">    {/* Can be deleted and replace with navi/search */}  
+      <div class="land">    {/* Can be deleted and replace with navi/search */}  {/*
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="#">OUTREACHD</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,8 +47,11 @@ export class Land extends React.Component {
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" />
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search NFPList Names</button>
+              <input class="form-control mr-sm-2" type="text" placeholder="Search NPF Name" />
+              <button class="btn btn-default my-2 my-sm-0" type="button">
+
+            <img src={mag} alt="Javascript is needed" />
+            </button>
             </form>
           </div>
         </nav>
@@ -66,7 +70,7 @@ export class Land extends React.Component {
         <div className="cooperations">Cooperations</div>
         <div className="not-for-profit">Not for Profit </div>
         <div className="providing-a-platform-for-corporations-to-efficiently-discover-opportunities-to-volunteer-supportof-specialize-skills-and-expertise-to-nfps">Providing a platform for corporations to efficiently <br />discover opportunities to volunteer support<br />of specialize skills and expertise to NFPs.</div>
-        <div className="bring-awareness">Bring awareness</div>
+        <div className="bring-awareness">To bring awareness</div>
       </div>
       </div>
     
