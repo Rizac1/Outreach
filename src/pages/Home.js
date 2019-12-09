@@ -24,6 +24,7 @@ const Styles = styled.div`
 
   p {
     text-align: center;
+    font-size: 18px;
   }
 
   h4 {
