@@ -4,18 +4,22 @@ import gears from '../assets/gears.jpg';
 import styled from "styled-components";
 
 const Styles = styled.div`
-  article {
+   article {
     float: left;
     padding: 20px;
-    width: 50%;
-    background-color: #f1f1f1;
+    width: 48%;
+    background-color: #f3f1ef;
+    margin-top: 25px;
+    box-shadow: 8px 8px 5px #13293d;
   }
 
   .Non-Profits {
     float: right;
-    padding: 16px;
-    width: 50%;
-    background-color: #f1f1f1;
+    padding: 20px;
+    padding-bottom: 30px;
+    width: 48%;
+    background-color: #f3f1ef;
+    margin-top: 25px;
   }
 
   p {
