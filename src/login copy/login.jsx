@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { business } from "../login copy/assets/image-1.png"
+import mag  from "../assets/mag.webp"
+import image  from "../login copy/assets/image-1.png"
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
@@ -109,19 +110,29 @@ export class Login extends React.Component {
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" />
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+              <input class="form-control mr-sm-2" type="text" placeholder="Search NFP Names" />
+          <button class="btn btn-default my-2 my-sm-0" type="button">
+
+              <img src={mag} alt="Javascript is needed" />
+</button>
             </form>
           </div>
         </nav>
-        {/* News feed */}
-        <div class="col-12 col-sm-6 col-md-8 float-right d-flex justify-content-center sticky-top">
-          <div class="p-2">News Feed</div>
-          <div class="p-2">News Feed</div>
-          <div class="p-2">News Feed</div>
-          <div class="p-2">News Feed</div>
-        </div>
+        {/* News feed / Still needs to be responsive */}
 
+        
+        <div class="col-12 col-sm-6 col-md-8 float-right d-flex justify-content-center sticky-top image-1">
+          <div class="p-2"></div>
+          <div class="p-2"></div>
+          <div class="p-2 colors"><h3><br></br>
+            {/* Code for the company highlight will be implemented here*/}
+          </h3> 
+          
+         </div>
+          <div class="p-2"></div>
+        </div>
+  
+  
         <form> {/* Email and Password */}
           <div class="form-group">
             <h2 class="above">Log in to OutReachD</h2>
@@ -149,11 +160,9 @@ export class Login extends React.Component {
 
 
         {/* Background image.   Broken. */}
-        {/*<img src="assets/image-1.png"></img>
-  <div class="float-right"><img src="assets/image-1.png" class="img-fluid" alt="Responsive image"/>
-Preview
-Float right on all viewport sizes</div>
-    */}
+          
+       
+    
 
       </div>
     )
