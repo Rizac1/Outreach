@@ -1,6 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import mag from "../assets/mag.webp"
-import image from "../login copy/assets/image-1.png"
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
@@ -86,6 +84,7 @@ export class Login extends React.Component {
     const sidebarCollasped = windowWidth < 1100;
 
     return (
+
       <div class="container">
         {/*Nav */} {/*
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -180,8 +179,3 @@ export class Login extends React.Component {
                 )
               }
             }
-            
-            
-            
-            
-            

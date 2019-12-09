@@ -1,8 +1,15 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
+const nfplistCard = {
+  padding: "10px",
+  backgroundColor: "#f3f1ef",
+  margin: "25px",
+  boxShadow: "8px 8px 5px #13293d"
+};
+
 export const NFPListIndividualFrame = ({nfplist}) => (
-  <Card>
+ <Card style={nfplistCard}>
     <Card.Body>
       <Card.Title>{nfplist.ProfileName}</Card.Title>
       <Card.Subtitle className="mb-2 text-muted">{nfplist.ProjectName}</Card.Subtitle>

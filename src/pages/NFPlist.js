@@ -3,7 +3,12 @@ import { NFPListMapping } from '../components/NFPListMapping'
 import 'firebase/database';
 import firestore from "../firebase"
 import Firebase from "firebase"
-import firebase from "../firebase"
+import firebase from "../firebase";
+import styled from "styled-components";
+
+const Styles = styled.div`
+
+`
 
 class NFPList extends React.Component {
 
