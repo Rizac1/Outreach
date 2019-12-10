@@ -11,7 +11,8 @@ const Styles = styled.div`
     width: 48%;
     background-color: #f3f1ef;
     margin-top: 25px;
-    box-shadow: 8px 8px 5px #13293d;
+    box-shadow: 2px 2px 5px #13293d;
+    border-radius: 5px;
   }
 
   .Non-Profits {
