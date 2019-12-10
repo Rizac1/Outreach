@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-rou
 import PropTypes from "prop-types";
 import firebase from "../firebase";
 import { SignUp } from "./signup";
-import PasswordMask from "react-password-mask";
+//import PasswordMask from "react-password-mask";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../login_copy/login.css";
 

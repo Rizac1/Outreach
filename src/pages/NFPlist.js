@@ -1,16 +1,19 @@
 import React from 'react'
 import { NFPListMapping } from '../components/NFPListMapping'
-import firestore from "../firebase"
+//import firestore from "../firebase"
 import firebase from "../firebase"
 import { Form, FormControl } from 'react-bootstrap';
 //import mag from '../assets/mag.webp';
 import styled from 'styled-components';
-import Firebase from "firebase"
+//import Firebase from "firebase"
+
+
 const Styles = styled.div`
 .nfpsearchbar{
-  width: 20rem;
+  width: 30rem !important;
+  margin: 25px;
 }
-// background:blue
+
 `;
 
 
@@ -54,29 +57,15 @@ let newList = [];
 if (e.target.value !== "") {
         // Assign the original list to currentList
   currentList = this.state.nfplist;
-  console.log(currentList)
-
-  console.log(e.target.value)
-        // Use .filter() to determine which items should be displayed
-        // based on the search terms
-  // newList = currentList.filter(item => {
-  //           // change current item to lowercase
-  //   const lc = item.toString().toLowerCase();
-  //           // change search term to lowercase
-  //   const filter = e.target.value.toString().toLowerCase();
-  //           // check to see if the current list item includes the search term
-  //           // If it does, it will be added to newList. Using lowercase eliminates
-  //           // issues with capitalization in search terms and search content
-  //   return lc.includes(filter);
-
-  //   // [{},{},{}] ['hi','hello']
-  // });
+//loop list
   for (var i=0; i < currentList.length; i++) {
+    //if they are included and sets them to lower case first
     if (currentList[i].Skills.toLowerCase().includes(e.target.value.toLowerCase())) {
-        newList.push(currentList[i]);
+      //push to  the filtered list  
+      newList.push(currentList[i]);
     }
+
 }
-  console.log(newList)
 } else {
         // If the search bar is empty, set newList to original task list
   newList = this.props.nfplist;
@@ -91,16 +80,20 @@ render() {
 
   let page;
   if (this.state.databaseLinked){
-    page = <div> <NFPListMapping nfplist={this.state.filtered} /> </div>
+    page = <div> 
+      <Form inline>
+        <FormControl className='nfpsearchbar' type="text" placeholder="Search NFP Projects by Skills Needed" onChange={this.handleChange}/>
+        </Form>
+      <NFPListMapping nfplist={this.state.filtered} /> 
+    
+    </div>
   }else{
     page = <div><p>Loading...</p></div>
   }
     return (
     <Styles>
       <div>
-        <Form inline>
-        <FormControl className='nfpsearchbar' type="text" placeholder="Search NFP Projects by Skills Needed" onChange={this.handleChange}/>
-        </Form>
+        
         {page}
       </div>
     </Styles>
