@@ -1,11 +1,11 @@
 import React from 'react'
 import { NFPListMapping } from '../components/NFPListMapping'
-import 'firebase/database';
+import firestore from "../firebase"
 import firebase from "../firebase"
 import { Form, FormControl } from 'react-bootstrap';
 //import mag from '../assets/mag.webp';
 import styled from 'styled-components';
-
+import Firebase from "firebase"
 const Styles = styled.div`
 .nfpsearchbar{
   width: 20rem;

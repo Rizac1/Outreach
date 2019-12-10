@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import {Router, Route} from 'react-router';
-
-import "./index.css";
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { Home } from "./pages/Home";
+import NFPList from "./pages/NFPlist";
+import { NFPUser } from "./pages/NFPUser";
+import { NoPage } from "./pages/NoPage";
+import "./index.css";
+import SignUp from "../src/login_copy/signup"
 
 
 

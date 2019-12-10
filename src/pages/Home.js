@@ -1,25 +1,31 @@
 import React from "react";
 import { Jumbotron as Jumbo } from 'react-bootstrap';
-import group from '../assets/group.jpg';
+import gears from '../assets/gears.jpg';
 import styled from "styled-components";
+import "../pages/Home.css";
 
 const Styles = styled.div`
-  article {
+   article {
     float: left;
     padding: 20px;
-    width: 50%;
-    background-color: #f1f1f1;
+    width: 48%;
+    background-color: #f3f1ef;
+    margin-top: 25px;
+    box-shadow: 8px 8px 5px #13293d;
   }
 
   .Non-Profits {
     float: right;
-    padding: 16px;
-    width: 50%;
-    background-color: #f1f1f1;
+    padding: 20px;
+    padding-bottom: 30px;
+    width: 48%;
+    background-color: #f3f1ef;
+    margin-top: 25px;
   }
 
   p {
     text-align: center;
+    font-size: 18px;
   }
 
   h4 {
@@ -35,13 +41,12 @@ const Styles = styled.div`
   }
 
   .jumbotron {
-    background: url(${group}) no-repeat fixed bottom;
-    background-size: cover;
+    background: url(${gears}) no-repeat fixed;
+    background-size: contain;
     color: #efefef;
     height: 200px;
     margin-left: -405px;
     margin-right: -405px;
-    position: relative;
     z-index: -2;
   }
   
@@ -55,10 +60,6 @@ const Styles = styled.div`
     z-index: -1;
   }
 `;
-
-
-
-
 
 export const Home = () => (
   <Styles>
