@@ -37,7 +37,6 @@ export class Login extends React.Component {
       name: props.name,
       windowWidth: 0,
       windowHeight: 0
-
     };
 
     this.updateDimensions = this.updateDimensions.bind(this);
@@ -55,6 +54,7 @@ export class Login extends React.Component {
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions);
+    document.body.style = "background: white";
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions);

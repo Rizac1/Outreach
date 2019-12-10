@@ -58,7 +58,7 @@ export class Land extends React.Component {
         {/* Ends here */}
         <div className="image-1"></div>
         <div className="rectangle-1 float-left"></div>
-        <Link to={"/Home"}>
+        <Link to={"/"}>
         <button onClick="handleClick" className="rectangle-2">Start now</button>
         </Link>
         <div className="outreachd">OUTREACHD</div>
