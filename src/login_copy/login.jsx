@@ -56,6 +56,7 @@ export class Login extends React.Component {
     window.addEventListener("resize", this.updateDimensions);
     document.body.style = "background: white";
   }
+  
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions);
   }
@@ -83,8 +84,7 @@ export class Login extends React.Component {
     const sidebarCollasped = windowWidth < 1100;
 
     return (
-      <div class="body">
-      <div class="container">
+      <div className="body">
         {/*Nav */} {/*
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="#">OUTREACHD</a>
@@ -119,7 +119,7 @@ export class Login extends React.Component {
         {/* News feed / Still needs to be responsive */}
 
 
-        <div class="col-12 col-sm-6 col-md-8 float-right d-flex justify-content-center sticky-top image-1">
+        <div class="col-12 col-sm-6 col-md-8 float-right d-flex justify-content-center sticky-top image-1" style={{backgroundColor: "white"}}>
           <div class="p-2"></div>
           <div class="p-2"></div> {/*
           <div id="accordion" role="tablist">
@@ -174,7 +174,6 @@ export class Login extends React.Component {
 
 
 
-      </div>
       </div>
     )
   }

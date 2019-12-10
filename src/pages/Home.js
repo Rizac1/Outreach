@@ -64,7 +64,7 @@ export const Home = () => (
           and allow business to quickly engrave to provide volunteer resources to match the highlighted needs.
         </p>
         <p>
-          Check out our full list of Not-For-Profits: <a href="/NFPlist">NFP List</a>
+          Check out our full list of Not-For-Profit Projects: <a href="/NFPlist">NFP Project List</a>
         </p>
       </article>
       <article className="Non-Profits">
