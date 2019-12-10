@@ -54,8 +54,9 @@ export class Login extends React.Component {
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions);
-    document.body.style.background = "white";
+    document.body.style = "background: white";
   }
+  
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions);
   }
