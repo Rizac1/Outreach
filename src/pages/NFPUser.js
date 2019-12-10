@@ -50,6 +50,10 @@ const Styles = styled.div`
     margin-left: 0px;
     margin-right: 0px;
   }
+  button{
+    background-color:white !important;
+    color: black !important;
+  }
 `;
 
 export class NFPUser extends React.Component {
@@ -193,7 +197,6 @@ export class NFPUser extends React.Component {
                     onChange={this.updateInput}
                     value={this.state.Skills}
                   />
-                  <button type="submit">Submit</button>
                 </form>
                 <Card.Text>
                   Other Junk
@@ -214,10 +217,11 @@ export class NFPUser extends React.Component {
                 </Card.Text>
               </Card.Body>
             </Card>
-          </div>
-          <button  onClick={this.onclickfunction}>
+          
+          <button className='donebutton'  onClick={this.onclickfunction}>
             Done
-              </button>
+          </button>
+          </div>
         </Styles>
     } else {
       page =
@@ -264,7 +268,7 @@ export class NFPUser extends React.Component {
                 </Card.Text>
               </Card.Body>
             </Card>
-            <button onClick={() => {
+            <button className='donebutton' onClick={() => {
               this.setState({
                 isEditable: !this.state.isEditable
               });
