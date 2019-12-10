@@ -1,10 +1,9 @@
 import React from 'react';
-import { Card, Image, Jumbotron as Jumbo } from 'react-bootstrap';
-import group from '../assets/group.jpg';
+import { Card, Image } from 'react-bootstrap';
 import styled from "styled-components";
 import 'firebase/database';
-import firestore from "../firebase"
-import Firebase from "firebase"
+// import firestore from "../firebase"
+// import Firebase from "firebase"
 import firebase from "../firebase"
 
 const Styles = styled.div`

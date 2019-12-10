@@ -7,7 +7,7 @@ import { NoPage } from "./pages/NoPage";
 import { Layout } from "./components/Layout"; 
 import { Login, AuthProvider } from "../src/login_copy/login"
 import { Land } from "../src/land/land";
-import { Authentication } from "../src/login_copy/login"
+// import { Authentication } from "../src/login_copy/login"
 import SignUp from "../src/login_copy/signup"
 import { NavigationBar } from "./components/NavigationBar";
 

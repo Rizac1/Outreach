@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import mag from "../assets/mag.webp"
+// import PropTypes from "prop-types";
+// import mag from "../assets/mag.webp"
 
 import "./land.css";
 
@@ -13,12 +13,12 @@ export class Land extends React.Component {
     this.state = {
 
     };
-    function ActionLink() {
-      function handleClick(e) {
-        e.preventDefault();
-        console.log('The link was clicked.');
-      }
-  }
+  //   function ActionLink() {
+  //     function handleClick(e) {
+  //       e.preventDefault();
+  //       console.log('The link was clicked.');
+  //     }
+  // }
   }  
   render() {
 

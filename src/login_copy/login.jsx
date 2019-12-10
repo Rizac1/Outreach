@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
-import PropTypes from "prop-types";
+// import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
+// import PropTypes from "prop-types";
 import firebase from "../firebase";
-import { SignUp } from "./signup";
-import PasswordMask from "react-password-mask";
+// import { SignUp } from "./signup";
+// import PasswordMask from "react-password-mask";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../login_copy/login.css";
 
@@ -80,8 +80,8 @@ export class Login extends React.Component {
 
   render() {
     const { isPasswordShown } = this.state;
-    const { windowWidth } = this.state;
-    const sidebarCollasped = windowWidth < 1100;
+    // const { windowWidth } = this.state;
+    // const sidebarCollasped = windowWidth < 1100;
 
     return (
       <div className="body">
@@ -158,7 +158,7 @@ export class Login extends React.Component {
               Remember me?
     </label>
           </div>
-          <Link to={"./"}>
+          <Link to={"/land"}>
             <button type="button" class="btn btn-primary rectangle-3">Log In</button></Link>
         </form>
 
