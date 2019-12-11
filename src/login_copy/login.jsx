@@ -55,7 +55,7 @@ export class Login extends React.Component {
     window.addEventListener("resize", this.updateDimensions);
     document.body.style = "background: white";
   }
-  
+
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions);
   }
@@ -118,7 +118,7 @@ export class Login extends React.Component {
         {/* News feed / Still needs to be responsive */}
 
 
-        <div class="col-12 col-sm-6 col-md-8 float-right d-flex justify-content-center sticky-top image-1" style={{backgroundColor: "white"}}>
+        <div class="col-12 col-sm-6 col-md-8 float-right d-flex justify-content-center sticky-top image-1" style={{ backgroundColor: "white" }}>
           <div class="p-2"></div>
           <div class="p-2"></div> {/*
           <div id="accordion" role="tablist">
@@ -160,19 +160,9 @@ export class Login extends React.Component {
           <Link to={"/land"}>
             <button type="button" class="btn btn-primary rectangle-3">Log In</button></Link>
         </form>
-
         <Link to={"./signup"}>
           <div className="new-to-outreachd-sign-up-now">New to OutReachD?  Sign up now</div>
         </Link>
-
-
-
-
-        {/* Background image.   Broken. */}
-
-
-
-
       </div>
     )
   }
