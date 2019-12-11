@@ -1,7 +1,7 @@
 import React from 'react';
-import { Nav, Navbar, Form, FormControl, button } from 'react-bootstrap';
 import mag from '../assets/mag.webp';
 import styled from 'styled-components';
+import { Nav, Navbar, Form, FormControl, button } from 'react-bootstrap';
 
 const Styles = styled.div`
 .navbar {
@@ -9,7 +9,7 @@ const Styles = styled.div`
 }
 
     .navbar-brand, .navbar-nav .nav-link {
-        color: white;
+        color: white !important;
 
         &:hover {
             color: white;
@@ -36,7 +36,7 @@ export const NavigationBar = () => (
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/NFPlist">Non-Profit List</Nav.Link></Nav.Item>
+                    <Nav.Item><Nav.Link href="/NFPlist">NFP-Projects </Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/NFPUser">Profile</Nav.Link></Nav.Item>
                     <Nav.Item><Nav.Link href="/login">Login</Nav.Link></Nav.Item>
                     

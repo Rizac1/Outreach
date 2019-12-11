@@ -1,25 +1,33 @@
 import React from "react";
-import { Jumbotron as Jumbo } from 'react-bootstrap';
-import gears from '../assets/gears.jpg';
+import group from '../assets/group.jpg';
 import styled from "styled-components";
+import "../pages/Home.css";
 
 const Styles = styled.div`
    article {
-    float: left;
     padding: 20px;
-    width: 48%;
-    background-color: #f3f1ef;
-    margin-top: 25px;
-    box-shadow: 8px 8px 5px #13293d;
+    width: 60%;
+    background: #a9a9a9;
+    margin-top: 100px;
+    margin-left: -260px;
+    box-shadow: 3px 3px 5px #13293d;
+    border-radius: 5px;
   }
 
   .Non-Profits {
-    float: right;
     padding: 20px;
     padding-bottom: 30px;
-    width: 48%;
-    background-color: #f3f1ef;
+    width: 60%;
     margin-top: 25px;
+  }
+
+  img {
+    width: 1000px;
+    height: 650px;
+    float: right;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: -340px;
   }
 
   p {
@@ -32,45 +40,21 @@ const Styles = styled.div`
   }
 
   h1 {
-    text-align: center;
+    margin-left: -65px;
+    margin-bottom: -70px;
+    margin-top: 40px;
+    font-size: 60px;
   }
 
   ul {
-    width: 20%;
-  }
-
-  .jumbotron {
-    background: url(${gears}) no-repeat fixed;
-    background-size: contain;
-    color: #efefef;
-    height: 200px;
-    margin-left: -405px;
-    margin-right: -405px;
-    z-index: -2;
-  }
-  
-.overlay {
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+    width: 35%;
   }
 `;
 
-
-
-
-
 export const Home = () => (
   <Styles>
-    <Jumbo fluid className="jumbo">
-      <h1>Welcome</h1>
-    </Jumbo>
-
     <div>
+      <img src={group} alt="people holding each others wrist"/>
       <h1>Outreachd</h1>
       <article>
         <h4>Our Mission</h4>
@@ -79,32 +63,29 @@ export const Home = () => (
           and allow business to quickly engrave to provide volunteer resources to match the highlighted needs.
         </p>
         <p>
-          Check out our full list of Not-For-Profits: <a href="/NFPlist">NFP List</a>
+          Check out our full list of Not-For-Profit Projects: <a href="/NFPlist">NFP Project List</a>
         </p>
       </article>
       <article className="Non-Profits">
         <h4>List of some of our Not-For-Profits</h4>
         <ul className="container">
           <li>
-            <a href="#">Link 1</a>
+            <a id="linkwrap" href="/NFPUser">Baskweavers-R-Us</a>
           </li>
           <li>
-            <a href="#">Link 2</a>
+            <a href="/NFPUser">NFPex2</a>
           </li>
           <li>
-            <a href="#">Link 3</a>
+            <a href="/NFPUser">NFPex3</a>
           </li>
           <li>
-            <a href="#">Link 4</a>
+            <a href="/NFPUser">NFPex4</a>
           </li>
           <li>
-            <a href="#">Link 5</a>
+            <a href="/NFPUser">NFPex5</a>
           </li>
           <li>
-            <a href="#">Link 6</a>
-          </li>
-           <li>
-            <a href="#">Link 7</a>
+            <a href="/NFPUser">NFPex6</a>
           </li>
         </ul>
       </article>

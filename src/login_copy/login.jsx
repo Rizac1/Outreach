@@ -1,13 +1,11 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
-import PropTypes from "prop-types";
-import firebase from "../firebase"
-import { SignUp } from "./signup"
-import PasswordMask from "react-password-mask"
-
-import "./login.css";
+// import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-router-dom";
+// import PropTypes from "prop-types";
+import firebase from "../firebase";
+// import { SignUp } from "./signup";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../login_copy/login.css";
 
 export const AuthContext = React.createContext();
 
@@ -38,7 +36,6 @@ export class Login extends React.Component {
       name: props.name,
       windowWidth: 0,
       windowHeight: 0
-
     };
 
     this.updateDimensions = this.updateDimensions.bind(this);
@@ -56,7 +53,9 @@ export class Login extends React.Component {
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions);
+    document.body.style = "background: white";
   }
+
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions);
   }
@@ -80,12 +79,11 @@ export class Login extends React.Component {
 
   render() {
     const { isPasswordShown } = this.state;
-    const { windowWidth } = this.state;
-    const sidebarCollasped = windowWidth < 1100;
+    // const { windowWidth } = this.state;
+    // const sidebarCollasped = windowWidth < 1100;
 
     return (
-
-      <div class="container">
+      <div className="body">
         {/*Nav */} {/*
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="#">OUTREACHD</a>
@@ -120,7 +118,7 @@ export class Login extends React.Component {
         {/* News feed / Still needs to be responsive */}
 
 
-        <div class="col-12 col-sm-6 col-md-8 float-right d-flex justify-content-center sticky-top image-1">
+        <div class="col-12 col-sm-6 col-md-8 float-right d-flex justify-content-center sticky-top image-1" style={{ backgroundColor: "white" }}>
           <div class="p-2"></div>
           <div class="p-2"></div> {/*
           <div id="accordion" role="tablist">
@@ -139,43 +137,33 @@ export class Login extends React.Component {
       </div>
                 
          </div></div> </div> */}
-                    <div class="p-2"></div>
-                  </div>
-                  
+          <div class="p-2"></div>
+        </div>
 
 
-                  <form> {/* Email and Password */}
-                    <div class="form-group">
-                      <h2 class="above">Log in to OutReachD</h2>
-                      <input type="email" class="form-control shadow p-3 mb-5 bg-light rounded rectangle-1" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                      <input type={isPasswordShown ? "text" : "password"} class="form-control shadow p-3 mb-5 bg-light rounded rectangle-2" id="exampleInputPassword1" placeholder="Password" />
-                      <i className={`fa ${isPasswordShown ? "fa-eye" : "fa-eye-slash"} password-icon`} onClick={this.togglePasswordVisiblity} />
-                    </div>
 
-                    <div class="form-check mb-2 mr-sm-2">
-                      <input class="form-check-input" type="checkbox" id="inlineFormCheck" />
-                      <label class="form-check-label remember" for="inlineFormCheck">
-                        Remember me?
+        <form> {/* Email and Password */}
+          <div class="form-group">
+            <h2 class="above">Log in to OutReachD</h2>
+            <input type="email" class="form-control shadow p-3 mb-5 bg-light rounded rectangle-1" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input type={isPasswordShown ? "text" : "password"} class="form-control shadow p-3 mb-5 bg-light rounded rectangle-2" id="exampleInputPassword1" placeholder="Password" />
+            <i className={`fa ${isPasswordShown ? "fa-eye" : "fa-eye-slash"} password-icon`} onClick={this.togglePasswordVisiblity} />
+          </div>
+
+          <div class="form-check mb-2 mr-sm-2">
+            <input class="form-check-input" type="checkbox" id="inlineFormCheck" />
+            <label class="form-check-label remember" for="inlineFormCheck">
+              Remember me?
     </label>
-                    </div>
-                    <Link to={"./"}>
-                      <button type="button" class="btn btn-primary rectangle-3">Log In</button></Link>
-                  </form>
-
-                  <Link to={"./signup"}>
-                    <div className="new-to-outreachd-sign-up-now">New to OutReachD?  Sign up now</div>
-                  </Link>
-  
-
-
-
-                  {/* Background image.   Broken. */}
-
-
-
-
-                </div>
-                )
-              }
-            }
+          </div>
+          <Link to={"/land"}>
+            <button type="button" class="btn btn-primary rectangle-3">Log In</button></Link>
+        </form>
+        <Link to={"./signup"}>
+          <div className="new-to-outreachd-sign-up-now">New to OutReachD?  Sign up now</div>
+        </Link>
+      </div>
+    )
+  }
+}
